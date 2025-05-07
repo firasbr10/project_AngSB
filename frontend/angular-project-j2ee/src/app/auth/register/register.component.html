@@ -1,0 +1,65 @@
+<div class="register-container">
+  <div class="register-box">
+    <h2>Inscription</h2>
+    <form (ngSubmit)="onRegister()">
+      <div class="input-group">
+        <label for="username">Nom d'utilisateur</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          [(ngModel)]="username"
+          required
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="password">Mot de passe</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="password"
+          required
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="nom">Nom complet</label>
+        <input
+          type="text"
+          id="nom"
+          name="nom"
+          [(ngModel)]="nom"
+          required
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="competences">Compétences</label>
+        <input
+          type="text"
+          id="competences"
+          name="competences"
+          [(ngModel)]="competences"
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="disponibilite">Disponible</label>
+        <input
+          type="checkbox"
+          id="disponibilite"
+          name="disponibilite"
+          [(ngModel)]="disponibilite"
+        />
+      </div>
+
+      <button type="submit" class="btn">S'inscrire</button>
+
+      <div class="footer-links">
+        <a routerLink="/login">Se connecter</a>
+      </div>
+    </form>
+  </div>
+</div>
