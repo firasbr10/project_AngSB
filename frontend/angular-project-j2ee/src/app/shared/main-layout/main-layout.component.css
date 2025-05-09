@@ -1,8 +1,46 @@
+/* Mise en page du layout principal */
 .layout {
-    display: flex;
+  display: flex;
+  flex-direction: row; /* Sidebar à gauche, contenu principal à droite */
+  height: 100vh; /* Prendre toute la hauteur de l'écran */
+  overflow: hidden; /* Empêche les débordements hors du conteneur */
+}
+
+/* Style pour la sidebar */
+app-sidebar {
+  width: 250px; /* Largeur de la sidebar */
+  background-color: #2c3e50; /* Couleur de fond de la sidebar */
+  color: white;
+  padding-top: 20px; /* Espacement en haut de la sidebar */
+  position: fixed; /* Sidebar fixée à gauche de l'écran */
+  height: 100%; /* Hauteur totale de la sidebar */
+  top: 0;
+  left: 0;
+}
+
+/* Style pour le contenu principal */
+.content {
+  flex-grow: 1; /* Permet à la zone de contenu de prendre le reste de l'espace */
+  padding: 20px; /* Espacement intérieur du contenu */
+  background-color: #ecf0f1; /* Fond clair pour le contenu principal */
+  overflow-y: auto; /* Permet de faire défiler le contenu si nécessaire */
+  margin-left: 250px; /* Décalage du contenu vers la droite pour éviter de chevaucher la sidebar */
+}
+
+/* Adaptation mobile : Sidebar se cache et devient accessible via un bouton hamburger */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column; /* Les éléments se placent en colonne sur les écrans mobiles */
   }
+
+  app-sidebar {
+    position: relative; /* Sidebar se déplace en dessous du navbar sur les petits écrans */
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+
   .content {
-    flex: 1;
-    padding: 20px;
+    margin-left: 0; /* Le contenu prend toute la largeur disponible sur mobile */
   }
-  
+}

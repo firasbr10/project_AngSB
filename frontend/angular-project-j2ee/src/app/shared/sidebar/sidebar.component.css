@@ -1,0 +1,53 @@
+/* Style général pour la sidebar */
+.sidebar {
+    width: 250px; /* Largeur de la sidebar */
+    background-color: #34495e; /* Couleur de fond sombre */
+    color: white; /* Texte en blanc */
+    height: 100%; /* Hauteur totale */
+    position: fixed; /* Sidebar reste fixe à gauche */
+    top: 0;
+    left: 0;
+    padding-top: 30px; /* Espacement en haut */
+    z-index: 1000; /* Assure que la sidebar est toujours au-dessus du contenu */
+    transition: width 0.3s ease-in-out; /* Animation pour changement de largeur */
+  }
+  
+  /* Style pour l'en-tête de la sidebar */
+  .sidebar-header {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  /* Style des liens dans la sidebar */
+  .sidebar-links {
+    list-style-type: none; /* Retirer les puces de la liste */
+    padding: 0;
+  }
+  
+  .sidebar-links li {
+    padding: 10px 20px;
+  }
+  
+  .sidebar-links li a {
+    text-decoration: none; /* Retirer les soulignements des liens */
+    color: white; /* Texte des liens en blanc */
+    display: block; /* S'assurer que chaque lien prend toute la largeur */
+    transition: background-color 0.3s; /* Transition de la couleur de fond au survol */
+  }
+  
+  .sidebar-links li a:hover,
+  .sidebar-links li a.active {
+    background-color: #2c3e50; /* Changer la couleur au survol et quand l'élément est actif */
+  }
+  
+  /* Réactivité mobile : Sidebar devient un menu déroulant */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 200px; /* Réduire la largeur de la sidebar sur les petits écrans */
+    }
+  
+    .sidebar-links li {
+      text-align: center; /* Centrer les liens pour les petits écrans */
+    }
+  }
+  

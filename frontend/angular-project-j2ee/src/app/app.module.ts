@@ -8,17 +8,22 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component'; 
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SharedModule } from './shared/shared.module';  
+import { NgChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,  
-    RegisterComponent, DashboardComponent  
+    RegisterComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule  
+    HttpClientModule,
+    SharedModule,
+    NgChartsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

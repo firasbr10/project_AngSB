@@ -1,0 +1,20 @@
+<h2>Ajouter un équipement</h2>
+
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label>Nom :</label>
+    <input type="text" [(ngModel)]="equipement.nom" name="nom" required>
+  </div>
+
+  <div>
+    <label>État :</label>
+    <input type="text" [(ngModel)]="equipement.etat" name="etat" required>
+  </div>
+
+  <div>
+    <label>Date d'acquisition :</label>
+    <input type="date" [(ngModel)]="equipement.dateAcquisition" name="dateAcquisition" required>
+  </div>
+
+  <button type="submit">Ajouter</button>
+</form>

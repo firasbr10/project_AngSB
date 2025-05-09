@@ -1,1 +1,22 @@
-<p>navbar works!</p>
+<nav class="navbar">
+  <!-- Logo ou titre de l'application -->
+  <div class="navbar-brand">
+    <h1>Mon App</h1>
+  </div>
+
+  <!-- Menu de navigation -->
+  <ul class="navbar-links">
+    <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+    <li><a routerLink="/equipement/list" routerLinkActive="active">Équipements</a></li>
+    <li><a routerLink="/technicien/list" routerLinkActive="active">Techniciens</a></li>
+    <li><a routerLink="/panne/list" routerLinkActive="active">Pannes</a></li>
+    <li><a routerLink="/intervention/list" routerLinkActive="active">Interventions</a></li>
+  </ul>
+
+  <!-- Boutons Login, Register et Logout -->
+  <div class="navbar-actions">
+    <button class="navbar-btn" *ngIf="!isLoggedIn" (click)="login()">Login</button>
+    <button class="navbar-btn" *ngIf="!isLoggedIn" (click)="register()">Register</button>
+    <button class="navbar-btn" *ngIf="isLoggedIn" (click)="logout()">Logout</button>
+  </div>
+</nav>

@@ -1,0 +1,23 @@
+<h2>Liste des équipements</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>État</th>
+      <th>Date d'acquisition</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let eq of equipements">
+      <td>{{ eq.id }}</td>
+      <td>{{ eq.nom }}</td>
+      <td>{{ eq.etat }}</td>
+      <td>{{ eq.dateAcquisition | date: 'yyyy-MM-dd' }}</td>
+      <td>
+        <button (click)="deleteEquipement(eq.id!)">Supprimer</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

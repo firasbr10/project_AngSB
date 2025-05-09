@@ -1,0 +1,35 @@
+<div class="form-container">
+    <h2>Ajouter un Technicien</h2>
+  
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username">Nom d'utilisateur</label>
+        <input type="text" id="username" [(ngModel)]="technicien.username" name="username" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" [(ngModel)]="technicien.password" name="password" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" [(ngModel)]="technicien.nom" name="nom" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="competences">Compétences</label>
+        <input type="text" id="competences" [(ngModel)]="technicien.competences" name="competences" required>
+      </div>
+  
+      <div class="form-group">
+        <label>
+          <input type="checkbox" [(ngModel)]="technicien.disponibilite" name="disponibilite">
+          Disponible
+        </label>
+      </div>
+  
+      <button type="submit">Ajouter</button>
+    </form>
+  </div>
+  

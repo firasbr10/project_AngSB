@@ -1,1 +1,44 @@
-<p>dashboard works!</p>
+<div class="dashboard-container">
+    <h2 class="dashboard-title">Tableau de Bord</h2>
+
+    <!-- Ajout du graphique -->
+    <div style="display: block; margin-bottom: 3rem;">
+      <canvas baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [type]="'bar'">
+      </canvas>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card techniciens">
+        <div class="icon"><i class="fas fa-users"></i></div>
+        <div class="info">
+          <h3>Techniciens</h3>
+          <p>{{ stats.totalTechniciens }}</p>
+        </div>
+      </div>
+      <div class="stat-card equipements">
+        <div class="icon"><i class="fas fa-tools"></i></div>
+        <div class="info">
+          <h3>Équipements</h3>
+          <p>{{ stats.totalEquipements }}</p>
+        </div>
+      </div>
+      <div class="stat-card pannes">
+        <div class="icon"><i class="fas fa-exclamation-triangle"></i></div>
+        <div class="info">
+          <h3>Pannes</h3>
+          <p>{{ stats.totalPannes }}</p>
+        </div>
+      </div>
+      <div class="stat-card interventions">
+        <div class="icon"><i class="fas fa-wrench"></i></div>
+        <div class="info">
+          <h3>Interventions</h3>
+          <p>{{ stats.totalInterventions }}</p>
+        </div>
+      </div>
+    </div>
+</div>

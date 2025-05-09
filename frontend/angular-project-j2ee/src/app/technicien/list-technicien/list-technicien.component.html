@@ -1,0 +1,32 @@
+<div class="technicien-list">
+  <h2>Liste des Techniciens</h2>
+
+  <!-- Affichage des messages d'erreur -->
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Compétences</th>
+        <th>Disponibilité</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let technicien of techniciens">
+        <td>{{ technicien.id }}</td>
+        <td>{{ technicien.nom }}</td>
+        <td>{{ technicien.competences }}</td>
+        <td>{{ technicien.disponibilite ? 'Disponible' : 'Indisponible' }}</td>
+        <td>
+          <!-- Bouton pour supprimer un technicien -->
+          <button (click)="deleteTechnicien(technicien.id)">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
